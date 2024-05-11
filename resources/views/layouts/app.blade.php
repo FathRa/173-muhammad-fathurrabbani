@@ -10,7 +10,12 @@
 </head>
 
 <body>
+    @include('layouts.sidebar')
+    @include('layouts.topbar')
 
+    <main class="mp-10 ml-[15%] p-10">
+        @yield('content')
+    </main>
 </body>
 
 </html>
