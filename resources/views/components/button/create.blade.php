@@ -1,9 +1,8 @@
 @props(['route'])
 
-<div class="my-2 flex justify-end">
+<div class="my-2 flex justify-end" title="Create">
     <a href="{{ $route }}"
-        class="block rounded-md bg-dark-blue p-3 text-white ring-2 ring-white hover:bg-white hover:text-dark-blue"
-        title="Create">
+        class="block rounded-md bg-dark-blue p-3 text-white ring-2 ring-white hover:bg-white hover:text-dark-blue">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="h-6 w-6">
             <path stroke-linecap="round" stroke-linejoin="round"
