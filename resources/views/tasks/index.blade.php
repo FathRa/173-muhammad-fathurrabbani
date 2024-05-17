@@ -1,8 +1,9 @@
 @extends('layouts.app')
+
 @section('content')
     <x-section-index-wrapper>
-        <x-button.create route="{{ route('users.create') }}" />
+        <x-button.create route="{{ route('tasks.create') }}" />
 
-        @include('users._table')
+        @include('tasks._table')
     </x-section-index-wrapper>
 @endsection
