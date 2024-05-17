@@ -4,6 +4,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
+    $route = Route::current();
+
     return view('homes.index');
 });
 
@@ -38,7 +40,7 @@ Route::prefix('users')->name('users.')->group(function () {
     })->name('delete');
 });
 
-Route::prefix('taksk')->name('tasks.')->group(function () {
+Route::prefix('tasks')->name('tasks.')->group(function () {
 
 
     Route::get('/index', function () {
@@ -96,3 +98,18 @@ Route::prefix('taksk')->name('tasks.')->group(function () {
         return redirect()->back();
     })->name('delete');
 });
+
+Route::prefix('categories')->name('category.')->group(function () {
+
+    Route::get('index', function () {
+        return view('categories.index');
+    })->name('index');
+
+    Route::get('create', function () {
+        return view('categories.create');
+    })->name('create');
+});
+
+Route::get('account', function () {
+    return view('accounts.index');
+})->name('account');

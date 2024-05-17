@@ -6,9 +6,7 @@
     </header>
     <nav>
         <ul>
-            <li class="mx-2 my-1"><a
-                    class="flex w-full items-center justify-start gap-2 rounded-md p-5 text-sm hover:cursor-pointer hover:bg-white hover:font-bold hover:text-dark-blue"
-                    href="/">
+            <li class="mx-2 my-1"><a class="nav-menu {{ request()->route()->uri == '/' ? 'active' : '' }}" href="/">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="h-6 w-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -18,7 +16,7 @@
                 </a>
             </li>
             <li class="mx-2 my-1"><a
-                    class="flex w-full items-center justify-start gap-2 rounded-md p-5 text-sm hover:cursor-pointer hover:bg-white hover:font-bold hover:text-dark-blue"
+                    class="nav-menu {{ str_contains(request()->route()->uri, 'users') ? 'active' : '' }}"
                     href="{{ route('users.index') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="h-6 w-6">
@@ -29,7 +27,7 @@
                 </a>
             </li>
             <li class="mx-2 my-1"><a
-                    class="flex w-full items-center justify-start gap-2 rounded-md p-5 text-sm hover:cursor-pointer hover:bg-white hover:font-bold hover:text-dark-blue"
+                    class="nav-menu {{ str_contains(request()->route()->uri, 'tasks') ? 'active' : '' }}"
                     href="{{ route('tasks.index') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="h-6 w-6">
@@ -40,8 +38,8 @@
                 </a>
             </li>
             <li class="mx-2 my-1"><a
-                    class="flex w-full items-center justify-start gap-2 rounded-md p-5 text-sm hover:cursor-pointer hover:bg-white hover:font-bold hover:text-dark-blue"
-                    href="">
+                    class="nav-menu {{ str_contains(request()->route()->uri, 'categories') ? 'active' : '' }}"
+                    href="{{ route('category.index') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="h-6 w-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -58,8 +56,8 @@
         <p>Other</p>
         <ul>
             <li class="my-1">
-                <a href="#"
-                    class="flex w-full items-center justify-start gap-2 rounded-md p-5 text-sm hover:cursor-pointer hover:bg-white hover:font-bold hover:text-dark-blue">
+                <a href="{{ route('account') }}"
+                    class="nav-menu {{ request()->route()->uri == 'account' ? 'active' : '' }}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="h-6 w-6">
                         <path stroke-linecap="round" stroke-linejoin="round"

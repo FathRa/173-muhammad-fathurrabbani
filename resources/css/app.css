@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Table */
+.table {
+    @apply table-auto w-full;
+}
+
+.tr-head {
+    @apply rounded-md bg-dark-blue text-white;
+}
+
+.th {
+    @apply p-5;
+}
+
+.tr-body {
+    @apply text-center odd:bg-white odd:text-dark-blue even:bg-dark-blue even:text-white;
+}
+
+.td {
+    @apply p-2;
+}
+
+.action-wrapper {
+    @apply flex items-center justify-evenly;
+}
+/* Table */
+
+.active {
+    @apply bg-white text-dark-blue font-bold;
+}
+
+.nav-menu {
+    @apply flex w-full items-center justify-start gap-2 rounded-md p-5 text-sm hover:cursor-pointer hover:bg-white hover:font-bold hover:text-dark-blue;
+}

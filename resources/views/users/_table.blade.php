@@ -1,21 +1,25 @@
-<x-table.table>
-    <x-table.thead>
-        <x-table.th>#</x-table.th>
-        <x-table.th>Name</x-table.th>
-        <x-table.th>Email</x-table.th>
-        <x-table.th>Role</x-table.th>
-        <x-table.th>Actions</x-table.th>
-    </x-table.thead>
-    <x-table.tbody>
-        <x-table.td>1</x-table.td>
-        <x-table.td>Your Name</x-table.td>
-        <x-table.td>Your Email</x-table.td>
-        <x-table.td>Admin</x-table.td>
-        <x-table.td>
-            <div class="flex items-center justify-evenly">
-                <x-button.edit route="{{ route('users.edit', 1) }}" />
-                <x-button.delete route="{{ route('users.delete', 1) }}" />
-            </div>
-        </x-table.td>
-    </x-table.tbody>
-</x-table.table>
+<table class="table">
+    <thead>
+        <tr class="tr-head">
+            <th class="th">#</th>
+            <th class="th">Name</th>
+            <th class="th">Email</th>
+            <th class="th">Role</th>
+            <th class="th">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="tr-body">
+            <td class="td">1</td>
+            <td class="td">Name</td>
+            <td class="td">Email</td>
+            <td class="td">Role</td>
+            <td class="td">
+                <div class="action-wrapper">
+                    <x-button.edit route="{{ route('users.edit', 1) }}" />
+                    <x-button.delete route="{{ route('users.delete', 1) }}" />
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

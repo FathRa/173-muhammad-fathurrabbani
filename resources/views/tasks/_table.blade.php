@@ -1,29 +1,29 @@
-<x-table.table>
-    <x-table.thead>
-        <x-table.th>#</x-table.th>
-        <x-table.th>Title</x-table.th>
-        <x-table.th>Description</x-table.th>
-        <x-table.th>Author</x-table.th>
-        <x-table.th>Agent</x-table.th>
-        <x-table.th>Action</x-table.th>
-    </x-table.thead>
+<table class="table">
+    <thead>
+        <tr class="tr-head">
+            <th class="th">#</th>
+            <th class="th">Title</th>
+            <th class="th">Description</th>
+            <th class="th">Author</th>
+            <th class="th">Agent</th>
+            <th class="th">Action</th>
+        </tr>
+    </thead>
     <tbody>
         @foreach ($tasks as $task)
-            <tr class="bg-white text-dark-blue">
-                <x-table.td>{{ $task['id'] }}</x-table.td>
-                <x-table.td>{{ $task['title'] }}</x-table.td>
-                <x-table.td>
-                    {{ $task['description'] }}
-                </x-table.td>
-                <x-table.td>{{ $task['author'] }}</x-table.td>
-                <x-table.td>{{ $task['agent'] }}</x-table.td>
-                <x-table.td>
-                    <div class="flex items-center justify-evenly">
+            <tr class="tr-body">
+                <td class="td">{{ $task['id'] }}</td>
+                <td class="td">{{ $task['title'] }}</td>
+                <td class="td">{{ $task['description'] }}</td>
+                <td class="td">{{ $task['author'] }}</td>
+                <td class="td">{{ $task['agent'] }}</td>
+                <td class="td">
+                    <div class="action-wrapper">
                         <x-button.edit route="{{ route('tasks.edit', $task['id']) }}" />
                         <x-button.delete route="{{ route('tasks.delete', $task['id']) }}" />
                     </div>
-                </x-table.td>
+                </td>
             </tr>
         @endforeach
     </tbody>
-</x-table.table>
+</table>
