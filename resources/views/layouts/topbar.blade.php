@@ -1,14 +1,4 @@
 <nav class="ml-[15%] flex items-center px-5 pt-5">
-    <div
-        class="absolute left-[13.5%] flex h-10 w-10 items-center justify-center rounded-full border border-r-dark-blue bg-white shadow-sm">
-        <button class="">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="h-6 w-6 text-dark-blue">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-            </svg>
-
-        </button>
-    </div>
     <div class="relative mx-auto w-fit pt-2 text-gray-600">
         <button class="absolute top-[60%] translate-y-[-60%] pl-5">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

@@ -1,6 +1,6 @@
 @props(['route'])
 <div title="Delete">
-    <form action="{{ $route }}" method="POST">
+    <form action="{{ $route ?? $slot }}" method="POST">
         @method('DELETE')
         <button type="submit" class="block">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"

@@ -16,6 +16,8 @@
     <main class="mp-10 ml-[15%] p-10">
         @yield('content')
     </main>
+
+    @yield('script')
 </body>
 
 </html>
