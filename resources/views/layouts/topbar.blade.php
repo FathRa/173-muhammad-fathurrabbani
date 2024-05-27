@@ -12,11 +12,22 @@
             class="w-fit rounded-full bg-slate-400 p-2 pl-14 placeholder:text-black focus:border-0 focus:outline-none">
     </div>
 
-    <div class="flex items-center gap-2">
-        <p>Hello, Name!</p>
-        <figure class="h-10 w-10">
-            <img src="https://th.bing.com/th/id/R.02757b7ecfeb9cde9a5f2cc6021c021d?rik=rxoxiP9oDFYCOQ&riu=http%3a%2f%2fwww.fubiz.net%2fwp-content%2fuploads%2f2014%2f02%2fAnimal-10.jpg&ehk=078lsX6qUX2LxYOEQR4U1SqQV%2bvxqApZHfsiKfWgplA%3d&risl=&pid=ImgRaw&r=0"
-                alt="Profile Picture" class="rounded-full object-contain object-center">
-        </figure>
-    </div>
+    @auth
+        <div class="flex items-center gap-2">
+            <p>Hello, Name!</p>
+            <figure class="h-10 w-10">
+                <img src="https://th.bing.com/th/id/R.02757b7ecfeb9cde9a5f2cc6021c021d?rik=rxoxiP9oDFYCOQ&riu=http%3a%2f%2fwww.fubiz.net%2fwp-content%2fuploads%2f2014%2f02%2fAnimal-10.jpg&ehk=078lsX6qUX2LxYOEQR4U1SqQV%2bvxqApZHfsiKfWgplA%3d&risl=&pid=ImgRaw&r=0"
+                    alt="Profile Picture" class="rounded-full object-contain object-center">
+            </figure>
+        </div>
+    @endauth
+    @guest
+        <div class="flex items-center justify-start gap-2">
+            <x-button.primary id="login-btn">Login</x-button.primary>
+            <x-button.primary id="register-btn">Register</x-button.primary>
+        </div>
+
+        @include('auth.login')
+        @include('auth.register');
+    @endguest
 </nav>

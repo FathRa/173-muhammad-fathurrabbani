@@ -9,6 +9,12 @@ Route::get('/', function () {
     return view('homes.index');
 });
 
+route::prefix('auth')->name('auth.')->group(function () {
+    Route::get('login', function () {
+        return view('auth.login');
+    })->name('login');
+});
+
 
 Route::prefix('users')->name('users.')->group(function () {
     Route::get('/index', function () {

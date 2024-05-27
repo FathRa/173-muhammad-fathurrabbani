@@ -373,7 +373,3 @@
         </div>
     </div>
 </section>
-
-@section('script')
-    <script src="{{ asset('js/home/task-overview.js') }}"></script>
-@endsection
